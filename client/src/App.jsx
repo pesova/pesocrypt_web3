@@ -1,9 +1,13 @@
-import "./App.css";
+import { Welcome } from "./components";
+import Navbar from "./components/Navbar";
 
 const  App = () => {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello World</h1>
+    <div className="min-h-screen">
+      <div className="gradient-bg-welcome">
+        <Navbar />
+        <Welcome/>
+      </div>
     </div>
   );
 }
