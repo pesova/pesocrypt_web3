@@ -4,12 +4,13 @@ pragma solidity ^0.8.0;
 
 contract Transactions {
     uint256 transactionCount;
+    uint256 getDevName = 3;
 
     event Transfer(address from, address receiver, uint amount, string message, uint256 timestamp, string keyword);
 
     struct TransferStruct {
         address sender;
-        address receiver;
+        address receiver; 
         uint amount;
         string message;
         uint256 timestamp;
@@ -26,10 +27,14 @@ contract Transactions {
     }
 
     function getAllTransaction() public view returns (TransferStruct[] memory) {
-        // reutrn transaction
+        return transactions;
     }
 
     function getTransactionCount() public view returns (uint256) {
-        // returns transactionCount
+        return transactionCount;
+    }
+
+    function pesova() public view returns (uint256){
+        return getDevName;
     }
 }
